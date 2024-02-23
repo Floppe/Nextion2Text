@@ -1832,7 +1832,7 @@ if __name__ == '__main__':
     totalCodeLines = 0
     tusloc = set()
     for name, text in texts.items():
-        with open(hmiTextFolder / Path(name + hmiTextFileExt), "w") as f:
+        with open(hmiTextFolder / Path(name + hmiTextFileExt), "w", encoding = 'utf-8') as f:
             pageCodeLines = codeLines[name]
             sloc = len(pageCodeLines)
             usloc = set(pageCodeLines)
